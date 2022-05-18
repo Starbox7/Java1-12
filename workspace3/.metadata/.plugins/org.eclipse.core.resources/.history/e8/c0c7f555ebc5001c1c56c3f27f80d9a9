@@ -1,0 +1,29 @@
+package 중간고사IV;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int num = 7; // 최대 출력 숫자값
+
+		for (int row = 0; row <= num; row++) {
+			for (int col = num; col >= 0; col--) { // 왼쪽을 출력하는 for문
+				if (row >= col) {
+					System.out.print(col);
+				} else {
+					System.out.print(" ");
+				}
+			}
+
+			for (int col = 1; col <= num; col++) { // 오른쪽을 출력하는 for문
+				if (row >= col) {
+					System.out.print(col);
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println(); // 줄넘김
+		}
+
+	}
+
+}

@@ -1,0 +1,66 @@
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class ImageGalleryApp extends JFrame {
+
+	public ImageGalleryApp() {
+		setTitle("배열 다중 연결리스트를 사용한 갤러리 App");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		Container c = getContentPane();
+		c.setLayout(new BorderLayout());
+		
+		JPanel ImagePanel = new ImagePanel();
+		c.add(ImagePanel, BorderLayout.CENTER);
+		
+		JPanel ButtonPanel = new ButtonPanel();
+		c.add(ButtonPanel, BorderLayout.SOUTH);
+		
+		setSize(500,500);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new ImageGalleryApp();
+
+	}
+
+}
+
+class ImagePanel extends JPanel {
+	public ImagePanel() {
+		setLayout(new FlowLayout());
+
+		ImageIcon image1 = new ImageIcon(
+				"D:\\2022 2학년 1학기 전공\\자바 프로그래밍\\Java11_workspace\\Image_gallery_Openchallenge\\images\\image1.png");
+		ImageIcon image2 = new ImageIcon(
+				"D:\\2022 2학년 1학기 전공\\자바 프로그래밍\\Java11_workspace\\Image_gallery_Openchallenge\\images\\image2.png");
+		ImageIcon image3 = new ImageIcon(
+				"D:\\2022 2학년 1학기 전공\\자바 프로그래밍\\Java11_workspace\\Image_gallery_Openchallenge\\images\\image3.png");
+		ImageIcon image4 = new ImageIcon(
+				"D:\\2022 2학년 1학기 전공\\자바 프로그래밍\\Java11_workspace\\Image_gallery_Openchallenge\\images\\image4.png");
+		JLabel label1 = new JLabel(image1);
+		JLabel label2 = new JLabel(image2);
+		JLabel label3 = new JLabel(image3);
+		JLabel label4 = new JLabel(image4 );
+
+	}
+}
+
+class ButtonPanel extends JPanel {
+	public ButtonPanel() {
+		setLayout(new FlowLayout());
+
+		ImageIcon right_image = new ImageIcon(
+				"D:\\2022 2학년 1학기 전공\\자바 프로그래밍\\Java11_workspace\\Image_gallery_Openchallenge\\images\\right.png");
+		ImageIcon left_image = new ImageIcon(
+				"D:\\2022 2학년 1학기 전공\\자바 프로그래밍\\Java11_workspace\\Image_gallery_Openchallenge\\images\\left.png");
+		
+		JButton btn1 = new JButton(left_image);
+		JButton btn2 = new JButton(right_image);
+		add(btn1);
+		add(btn2);
+	}
+}

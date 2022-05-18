@@ -1,0 +1,29 @@
+package ch10_04;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+import javax.swing.*;
+
+
+public class leftKeyEx extends JFrame {
+	private String str = "Love Java";
+	private JLabel la = new JLabel(str);
+	
+	public leftKeyEx() {
+		setTitle("MouseListener와 MouseMotionListener 예제 \n18114847 김범준");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		Container c = getContentPane();
+		c.setLayout(new FlowLayout());
+		
+		c.add(la);
+
+		setSize(300, 200);
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

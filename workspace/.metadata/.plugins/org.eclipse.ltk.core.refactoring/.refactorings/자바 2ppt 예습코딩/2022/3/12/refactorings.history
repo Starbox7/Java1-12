@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;자바 1주차 실습과제/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;자바 2ppt 예습코딩&apos;&#x0D;&#x0A;- Destination element: &apos;자바 1주차 실습과제/src/(default package)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     practice002.java&#x0D;&#x0A;     practice001.java&#x0D;&#x0A;- Update references to refactored element" description="Move compilation units" destination="=자바 1주차 실습과제/src&lt;" element1="/src&lt;{practice002.java" element2="/src&lt;{practice001.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1647392197205" units="2" version="1.0"/>
+</session>

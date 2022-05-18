@@ -1,0 +1,94 @@
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Vector<Shape> v = new Vector<Shape>(20);
+		
+		Scanner sc = new Scanner(System.in);
+		Line line = new Line();
+		Rect rect = new Rect();
+		Circle circle = new Circle();
+		
+		while(true) {
+			int num;
+			System.out.print("삽입1, 삭제2, 모두보기3, 종료4>>");
+			num = sc.nextInt();
+			if(num==4)
+				break;
+			if(num==1) {
+				System.out.print("Line1, Rect2, Circle3>>");
+				num = sc.nextInt();
+				if(num==1) {
+					v.add(line.getDraw());
+				}
+				else if(num==2) {
+					v.add(rect.getDraw());
+				}
+				else {
+					v.add(circle.getDraw());
+				}
+			}
+			else if(num==2) {
+				System.out.print("삭제할 도형의 위치>>");
+				num = sc.nextInt();
+				if(num<=v.size())
+					v.remove(num-1);
+				else
+					System.out.println("삭제할 수 없습니다.");
+			}
+			else {
+				for(int i= 0; i<v.size(); i++) {
+					System.out.println(v.get(i));
+				}
+			}
+		}
+	}
+
+}
+
+abstract class Shape {
+	private Shape next;
+	public Shape() { next = null;}
+	public void setNext(Shape obj) {
+      next = obj;
+    } 
+	public Shape getNext() {
+      return next;
+    }
+	public abstract void draw();
+}
+
+
+
+
+
+class Circle extends Shape {
+	public void draw() {
+		 System.out.println("Circle");
+	}
+	
+	public String getDraw() {
+		return "Circle";
+	}
+
+}
+class Line extends Shape {
+	public void draw() {
+		 System.out.println("Line");
+	}
+	public String getDraw() {
+		return "Line";
+	}
+}
+class Rect extends Shape {
+	public void draw() {
+		 System.out.println("Rect");
+	}
+	public String getDraw() {
+		return "Rect";
+	}
+
+}
+

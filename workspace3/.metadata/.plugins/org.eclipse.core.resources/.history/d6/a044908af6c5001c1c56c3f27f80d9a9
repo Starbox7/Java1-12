@@ -1,0 +1,48 @@
+package 중간고사IV;
+
+import java.util.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num;
+
+		while (true) {
+			try {
+				num = sc.nextInt();
+
+				if (num == 1 || num == 2 || num == 3 || num == 4 || num == 5 || num == 6 || num == 7 || num == 8
+						|| num == 9) {
+					break;
+				}
+			} catch (InputMismatchException e) {
+				
+			}
+			
+		}
+
+		for (int row = 1; row <= num; row++) {
+			for (int col = num; col >= 1; col--) {
+				if (row >= col) {
+					System.out.print(col + " ");
+				} else {
+					System.out.print("  ");
+				}
+			}
+
+			for (int col = 2; col <= num; col++) {
+				if (row > col) {
+					System.out.print(col + " ");
+				} else if (row == col) {
+					System.out.print(col);
+				} else {
+					// System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+
+	}
+
+}
